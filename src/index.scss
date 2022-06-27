@@ -1,0 +1,35 @@
+@import "~normalize.css/normalize.css";
+
+@import "styles/variables.scss";
+@import "styles/reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("../public/img/austin-schmid-g6XNbaRhjMc-unsplash.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+// @media only screen and (max-width: 960px) {
+//   html {
+//     font-size: 12px;
+//   }
+
+//   .layout {
+//     flex-direction: column;
+//   }
+// }
+
+// @media only screen and (max-width: 320px) {
+//   html {
+//     font-size: 10px;
+//   }
+// }

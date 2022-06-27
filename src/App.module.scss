@@ -1,0 +1,12 @@
+@import "./styles/variables.scss";
+.layout {
+  background-color: $dark-background;
+  border-radius: 10px;
+  margin: 2em;
+  padding: 0.5em 0em;
+  box-shadow: 6px 10px 10px 5px rgb(68, 63, 63);
+  transition: 1s;
+  &:empty {
+    display: none;
+  }
+}

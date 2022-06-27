@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $play-blue-background;
+  color: $play-blue;
+  width: 35px;
+  height: 35px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  border: solid $play-blue 2px;
+  border-radius: $round;
+  transition: 0.1s;
+  box-shadow: 0 0 10px 2px $confirm-color;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 11px 3px $confirm-color;
+    cursor: pointer;
+    background-color: $confirm-color;
+    color: $dark-background;
+  }
+  &:active {
+    cursor: pointer;
+    transition: 0ms;
+    background-color: $confirm-click-color;
+    transform: scale(0.9);
+    box-shadow: 0 0 18px 7px $click-color;
+  }
+}
+
+.sm {
+  width: 30px;
+  height: 30px;
+  padding: 0.1rem;
+}
+.lg {
+  width: 40px;
+  height: 40px;
+  padding: 0.3rem;
+}

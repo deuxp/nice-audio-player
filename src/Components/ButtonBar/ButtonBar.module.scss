@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: solid red 1px;
+}
+
+.slider__container {
+  display: flex;
+  justify-content: center;
+  // border: solid red 3px;
+}

@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.tab__selected {
+  color: white;
+}

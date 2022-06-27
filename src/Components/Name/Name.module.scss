@@ -1,0 +1,18 @@
+@import "../../styles/animations.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+}
+
+.hidden__class {
+  opacity: 0;
+  transition: all 2s linear 1s; // last one is delay
+}
+
+.shown__class {
+  opacity: 1;
+  transition: all 2s linear 1s; // last one is delay
+}
