@@ -1,7 +1,6 @@
 import style from "./App.module.scss";
-import Footer from "./Components/Footer";
-import Name from "./Components/Name";
-import ProjectSelector from "./Components/ProjectSelector";
+// import WavePlayer from "./nice-audio-player/Components/WavePlayer";
+import WavePlayer from "./nice-audio-player";
 const { layout } = style;
 
 const track = "/drubs.mp3";
@@ -9,10 +8,7 @@ const track = "/drubs.mp3";
 function App() {
   return (
     <>
-      <Name />
-      <main className={layout}>{/* <TabSection track={track} /> */}</main>
-      {/* <ProjectSelector /> */}
-      <Footer />
+      <WavePlayer url={track} />
     </>
   );
 }
