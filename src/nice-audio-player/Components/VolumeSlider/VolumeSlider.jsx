@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import style from "./VolumeSlider.module.scss";
 import Slider from "@mui/material/Slider";
+import { useEffect, useState } from "react";
+import style from "./VolumeSlider.module.scss";
 
-import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeDownIcon from "@mui/icons-material/VolumeDown";
+import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 
 function VolumeSlider({ setUVolume }) {
   const [volume, setVolume] = useState(0.7);
@@ -27,17 +27,17 @@ function VolumeSlider({ setUVolume }) {
         className={style.slider}
         sx={{
           "& .MuiSlider-thumb": {
-            color: "rgb(45,56,6)",
-            boxShadow: "0 0 15px 3px #10ac84",
+            color: "rgba(0,0,0, 1)",
+            boxShadow: "0 0 5px 2px rgba(0,0,0,0.7)",
             "&:hover": {
-              boxShadow: "0 0 17px 5px #10ac84",
+              boxShadow: "0 0 8px 3px rgba(0,0,0,0.7)",
             },
           },
           "& .MuiSlider-track": {
-            color: "rgba(63, 217, 91, .35)",
+            color: "rgba(0,0,0, 1)",
           },
           "& .MuiSlider-rail": {
-            backgroundColor: "rgba(80, 100, 255, 1)",
+            backgroundColor: "rgba(0,0,0, 1)",
           },
         }}
       />

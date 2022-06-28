@@ -10,13 +10,14 @@ export function useWaveSurfer(url) {
   useEffect(() => {
     const formWaveSurferOptions = ref => ({
       container: ref,
-      waveColor: "rgba(100, 200, 100, .2)",
-      progressColor: "rgb(63, 217, 91)",
+      waveColor: "rgba(0, 0, 0, .2)",
+      // waveColor: "rgba(100, 200, 100, .2)",
+      progressColor: "rgb(0, 0, 0)",
       cursorColor: "rgb(63, 17, 91)",
       barWidth: 2,
       barRadius: 2,
       responsive: true,
-      height: 150,
+      height: 50,
       normalize: true,
       partialRender: true,
     });

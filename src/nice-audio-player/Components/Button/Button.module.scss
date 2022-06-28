@@ -5,22 +5,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $play-blue-background;
-  color: $play-blue;
+  background-color: transparent;
+  color: $black;
   width: 35px;
   height: 35px;
   padding: 0.2rem;
   margin: 0.3rem;
-  border: solid $play-blue 2px;
+  border: solid $black 2px;
   border-radius: $round;
   transition: 0.1s;
-  box-shadow: 0 0 10px 2px $confirm-color;
+  box-shadow: 0 0 10px 2px $black;
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 11px 3px $confirm-color;
+    box-shadow: 0 0 11px 5px $black;
     cursor: pointer;
-    background-color: $confirm-color;
-    color: $dark-background;
+    background-color: $black;
+    color: $white;
   }
   &:active {
     cursor: pointer;

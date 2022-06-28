@@ -1,6 +1,7 @@
 import { useWaveSurfer } from "../../Hooks/useWaveSurfer";
 import ButtonBar from "../ButtonBar";
 import style from "./WavePlayer.module.scss";
+import AlbumArt from "../AlbumArt";
 const { container } = style;
 
 function WavePlayer({ url }) {
@@ -15,6 +16,7 @@ function WavePlayer({ url }) {
 
   return (
     <div className={container}>
+      <AlbumArt />
       <div id="waveform" ref={waveFormRef} />
       <ButtonBar
         setUVolume={setUVolume}
