@@ -1,12 +1,16 @@
+import { memo } from "react";
 import style from "./AlbumArt.module.scss";
 
-function AlbumArt() {
-  const { album } = style;
+const AlbumArt = memo(({ img }) => {
+  const { album, image } = style;
+  console.log({ img });
   return (
-    <div style={{ display: "flex" }}>
-      <div className={album}>AlbumArt</div>
-    </div>
+    <>
+      <div className={album}>
+        <img className={image} src={img} />
+      </div>
+    </>
   );
-}
+});
 
 export default AlbumArt;
