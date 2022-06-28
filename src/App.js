@@ -1,5 +1,5 @@
 import style from "./App.module.scss";
-import WavePlayer from "./nice-audio-player";
+import WavePlayer from "./lib";
 const { layout } = style;
 
 const track = "/drubs.mp3";

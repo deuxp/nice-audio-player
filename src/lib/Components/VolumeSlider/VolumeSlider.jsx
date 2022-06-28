@@ -1,3 +1,4 @@
+// import Slider from "@mui/material/Slider";
 import Slider from "@mui/material/Slider";
 import { useEffect, useState } from "react";
 import style from "./VolumeSlider.module.scss";
