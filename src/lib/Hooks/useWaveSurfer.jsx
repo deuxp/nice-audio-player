@@ -14,7 +14,7 @@ export function useWaveSurfer(url) {
       // waveColor: "rgba(100, 200, 100, .2)",
       progressColor: "rgb(0, 0, 0)",
       cursorColor: "rgb(63, 17, 91)",
-      barWidth: 2,
+      barWidth: 0,
       barRadius: 2,
       responsive: true,
       height: 50,
@@ -46,10 +46,10 @@ export function useWaveSurfer(url) {
   };
 
   const handleSkipForward = () => {
-    wavesurfer.current.skipForward(1);
+    wavesurfer.current.skipForward(10);
   };
   const handleSkipBackward = () => {
-    wavesurfer.current.skipBackward(1);
+    wavesurfer.current.skipBackward(10);
   };
   return {
     waveFormRef,

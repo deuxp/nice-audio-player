@@ -14,12 +14,12 @@
   border: solid $black 2px;
   border-radius: $round;
   transition: 0.1s;
-  box-shadow: 0 0 10px 2px $black;
+  box-shadow: 0 0 5px 2px rgb(62, 62, 62);
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 0 11px 5px $black;
     cursor: pointer;
-    background-color: $black;
+    background-color: rgb(166, 166, 166);
     color: $white;
   }
   &:active {
