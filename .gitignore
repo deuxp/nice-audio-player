@@ -13,6 +13,7 @@
 /build
 
 # misc
+public/img/headshot.jpg
 .DS_Store
 .env.local
 .env.development.local
