@@ -8,11 +8,13 @@ const img = "img/headshot.jpg";
 function WavePlayer({ url }) {
   const {
     waveFormRef,
-    handlePlayPause,
     isPlaying,
-    handleSkipBackward,
-    handleSkipForward,
     setUVolume,
+    handlePlayPause,
+    handleRewind,
+    handleSkipBackward,
+    handleSkipNext,
+    handleFastForward,
   } = useWaveSurfer(url);
 
   return (
@@ -23,8 +25,10 @@ function WavePlayer({ url }) {
         setUVolume={setUVolume}
         handlePlayPause={handlePlayPause}
         isPlaying={isPlaying}
-        handleSkipForward={handleSkipForward}
+        handleFastForward={handleFastForward}
         handleSkipBackward={handleSkipBackward}
+        handleSkipNext={handleSkipNext}
+        handleRewind={handleRewind}
       />
     </div>
   );

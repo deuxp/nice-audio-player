@@ -29,9 +29,8 @@ function VolumeSlider({ setUVolume }) {
         sx={{
           "& .MuiSlider-thumb": {
             color: "rgba(0,0,0, 1)",
-            boxShadow: "0 0 5px 2px rgba(0,0,0,0.7)",
             "&:hover": {
-              boxShadow: "0 0 8px 3px rgba(0,0,0,0.7)",
+              boxShadow: "0 0 3px 0px rgba(0,0,0,0.7)",
             },
           },
           "& .MuiSlider-track": {

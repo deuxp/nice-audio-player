@@ -45,18 +45,27 @@ export function useWaveSurfer(url) {
     setIsPlaying(prev => !prev);
   };
 
-  const handleSkipForward = () => {
+  const handleSkipNext = () => {
+    console.log("skip next");
+  };
+
+  const handleFastForward = () => {
     wavesurfer.current.skipForward(10);
   };
   const handleSkipBackward = () => {
+    console.log("skip previous");
+  };
+  const handleRewind = () => {
     wavesurfer.current.skipBackward(10);
   };
   return {
     waveFormRef,
-    handlePlayPause,
     isPlaying,
+    handlePlayPause,
+    handleRewind,
     handleSkipBackward,
-    handleSkipForward,
+    handleSkipNext,
+    handleFastForward,
     setUVolume,
   };
 }

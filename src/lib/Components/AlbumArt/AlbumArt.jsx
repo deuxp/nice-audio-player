@@ -14,14 +14,14 @@ const AlbumArt = memo(({ img }) => {
         <img alt="album cover" className={image} src={img} />
       </div>
       <div className={titles}>
-        <h5 dataToggle="tooltip" dataPlacement="top" title={artistName}>
+        <h5 datatoggle="tooltip" dataplacement="top" title={artistName}>
           {artistName}
         </h5>
-        <h3 dataToggle="tooltip" dataPlacement="top" title={songTitle}>
+        <h3 datatoggle="tooltip" dataplacement="top" title={songTitle}>
           <strong>{songTitle}</strong>
         </h3>
 
-        <h4 dataToggle="tooltip" dataPlacement="top" title={albumTitle}>
+        <h4 datatoggle="tooltip" dataplacement="top" title={albumTitle}>
           {albumTitle}
         </h4>
       </div>
