@@ -13,7 +13,7 @@
 /build
 
 # misc
-public/img/headshot.jpg
+public/img/darkside.png
 .DS_Store
 .env.local
 .env.development.local
