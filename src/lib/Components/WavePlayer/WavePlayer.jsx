@@ -3,30 +3,29 @@ import AlbumArt from "../AlbumArt";
 import ButtonBar from "../ButtonBar";
 import style from "./WavePlayer.module.scss";
 const { container } = style;
-const img = "img/headshot.jpg";
 
-function WavePlayer({ url }) {
+function WavePlayer({ track, handleSkipPrevious, handleSkipNext }) {
+  const { url } = track;
+
   const {
     waveFormRef,
     isPlaying,
     setUVolume,
     handlePlayPause,
     handleRewind,
-    handleSkipBackward,
-    handleSkipNext,
     handleFastForward,
   } = useWaveSurfer(url);
 
   return (
     <div className={container}>
-      <AlbumArt img={img} />
+      <AlbumArt {...track} />
       <div id="waveform" ref={waveFormRef} />
       <ButtonBar
         setUVolume={setUVolume}
         handlePlayPause={handlePlayPause}
         isPlaying={isPlaying}
         handleFastForward={handleFastForward}
-        handleSkipBackward={handleSkipBackward}
+        handleSkipPrevious={handleSkipPrevious}
         handleSkipNext={handleSkipNext}
         handleRewind={handleRewind}
       />

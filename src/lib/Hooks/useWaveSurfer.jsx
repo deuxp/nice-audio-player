@@ -11,11 +11,8 @@ export function useWaveSurfer(url) {
     const formWaveSurferOptions = ref => ({
       container: ref,
       waveColor: "rgba(0, 0, 0, .2)",
-      // waveColor: "rgba(100, 200, 100, .2)",
       progressColor: "rgb(0, 0, 0)",
       cursorColor: "rgb(63, 17, 91)",
-      barWidth: 0,
-      barRadius: 2,
       responsive: true,
       height: 50,
       normalize: true,
@@ -27,6 +24,8 @@ export function useWaveSurfer(url) {
     wavesurfer.current.load(url);
     wavesurfer.current.on("ready", () => {
       console.log("everything is ready");
+      let duration = wavesurfer.current.getDuration();
+      console.log({ duration });
     });
     wavesurfer.current.on("finish", () => {
       setIsPlaying(prev => !prev);
@@ -45,26 +44,19 @@ export function useWaveSurfer(url) {
     setIsPlaying(prev => !prev);
   };
 
-  const handleSkipNext = () => {
-    console.log("skip next");
-  };
-
   const handleFastForward = () => {
     wavesurfer.current.skipForward(10);
   };
-  const handleSkipBackward = () => {
-    console.log("skip previous");
-  };
+
   const handleRewind = () => {
     wavesurfer.current.skipBackward(10);
   };
+
   return {
     waveFormRef,
     isPlaying,
     handlePlayPause,
     handleRewind,
-    handleSkipBackward,
-    handleSkipNext,
     handleFastForward,
     setUVolume,
   };

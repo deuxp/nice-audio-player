@@ -11,7 +11,7 @@ import style from "./ButtonBar.module.scss";
 function ButtonBar({
   handlePlayPause,
   handleFastForward,
-  handleSkipBackward,
+  handleSkipPrevious,
   handleRewind,
   handleSkipNext,
   isPlaying,
@@ -20,7 +20,7 @@ function ButtonBar({
   return (
     <>
       <section className={style.container}>
-        <Button onClick={handleSkipBackward} size="sm">
+        <Button onClick={handleSkipPrevious} size="sm">
           <SkipPreviousIcon />
         </Button>
         <Button onClick={handleRewind} size="sm">
