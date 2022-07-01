@@ -4,8 +4,10 @@ import WaveSurfer from "wavesurfer.js";
 export function useWaveSurfer(url) {
   const waveFormRef = useRef(null);
   const wavesurfer = useRef(null);
+  const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [uVolume, setUVolume] = useState(0.5);
+  const [duration, setDuration] = useState(null);
 
   useEffect(() => {
     const formWaveSurferOptions = ref => ({
@@ -17,6 +19,7 @@ export function useWaveSurfer(url) {
       height: 50,
       normalize: true,
       partialRender: true,
+      // pixelRatio: 1,
     });
     wavesurfer.current = WaveSurfer.create(
       formWaveSurferOptions(waveFormRef.current)
@@ -24,8 +27,8 @@ export function useWaveSurfer(url) {
     wavesurfer.current.load(url);
     wavesurfer.current.on("ready", () => {
       console.log("everything is ready");
-      let duration = wavesurfer.current.getDuration();
-      console.log({ duration });
+      setDuration(wavesurfer.current.getDuration());
+      setIsReady(ready => !ready);
     });
     wavesurfer.current.on("finish", () => {
       setIsPlaying(prev => !prev);
@@ -52,12 +55,22 @@ export function useWaveSurfer(url) {
     wavesurfer.current.skipBackward(10);
   };
 
+  const currentTime = () => {
+    if (wavesurfer.current) {
+      return wavesurfer.current?.getCurrentTime();
+    }
+    return 0;
+  };
+
   return {
+    currentTime,
     waveFormRef,
     isPlaying,
     handlePlayPause,
     handleRewind,
     handleFastForward,
     setUVolume,
+    duration,
+    isReady,
   };
 }
