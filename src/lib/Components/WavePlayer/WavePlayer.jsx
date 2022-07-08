@@ -1,4 +1,4 @@
-import { useWaveSurfer } from "../../Hooks/useWaveSurfer";
+import { useWaveSurfer } from "../../hooks/useWaveSurfer";
 import AlbumArt from "../AlbumArt";
 import ButtonBar from "../ButtonBar";
 import Timer from "../Timer";
