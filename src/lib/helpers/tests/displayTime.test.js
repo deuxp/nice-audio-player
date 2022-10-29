@@ -32,3 +32,8 @@ test("display the time: one hour in correct format", () => {
 });
 
 // --- elapsed tests
+
+// 30sec - 30sec === 0:00:00
+// 45sec - 43 sec === 0:00:02
+// 5 min 3 sec: (60 * 5 + 3) - 2 min 10 sec: (60 * 2 + 10) === 0:02:53
+// 3 hours
