@@ -6,7 +6,7 @@ A React component which is an improved version of the standard HTML5 media playe
 
 ## Props
 
-The Nice Audio Player pkg imports the `<WavePlayer>` component which takes 3 props:
+The Nice Audio Player pkg exposes the `<WavePlayer>` component which takes 3 props:
 
 - _track_ - Object containing all the information necessary to play the audio.
 
