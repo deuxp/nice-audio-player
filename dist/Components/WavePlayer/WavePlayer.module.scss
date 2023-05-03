@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 8px;
+  border: solid black 3px;
+  display: block;
+  padding: 1em 0.5em;
+
+  // box-shadow: 5px 5px 8px 1px, -1px 0px 17px 0.5px rgb(32, 42, 36);
+}
+
+#waveform {
+  width: auto;
+}

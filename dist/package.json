@@ -1,0 +1,36 @@
+{
+  "name": "nice-audio-player",
+  "version": "1.0.0",
+  "description": "A nice looking audio player Component for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deuxp/nice-audio-player.git"
+  },
+  "keywords": [
+    "audio",
+    "web audio",
+    "web audio API",
+    "wave",
+    "waveform",
+    "mp3 player"
+  ],
+  "author": "Gottfried Kleinberger",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/deuxp/nice-audio-player/issues"
+  },
+  "homepage": "https://github.com/deuxp/nice-audio-player#readme",
+  "peerDependencies": {
+    "wavesurfer.js": "^6.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.6",
+    "sass": "^1.52.1"
+  }
+}

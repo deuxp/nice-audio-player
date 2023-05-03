@@ -3,7 +3,8 @@ import WavePlayer from "./lib";
 const { layout } = style;
 
 const track = {
-  url: "/drubs.mp3",
+  url: "/discovery_beach.mp3",
+  // url: "/drubs.mp3",
   albumCover: "img/darkside.png",
   album: "Darkside of the Moon",
   artist: "Pink Floyd",

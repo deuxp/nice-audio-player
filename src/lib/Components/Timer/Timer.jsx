@@ -12,14 +12,16 @@ function Timer({ duration, isPlaying, currentTime, isReady }) {
   useEffect(() => {
     if (isPlaying) {
       elapse = setInterval(() => {
-        setElapsedTime(Math.round(currentTime()));
-      }, 1000);
+        let seconds = Math.round(currentTime());
+        setElapsedTime(displayTime(seconds));
+      }, 500);
     }
     if (isReady) {
-      setElapsedTime(Math.round(currentTime()));
+      let seconds = Math.round(currentTime());
+      setElapsedTime(displayTime(seconds));
     }
     return () => clearInterval(elapse);
-  }, [isPlaying, isReady]);
+  }, [isPlaying, isReady, currentTime]);
 
   return (
     <div className={clock}>

@@ -1,7 +1,6 @@
-import { useWaveSurfer } from "../../Hooks/useWaveSurfer";
+import { useWaveSurfer } from "../../hooks/useWaveSurfer";
 import AlbumArt from "../AlbumArt";
 import ButtonBar from "../ButtonBar";
-import Timer from "../Timer";
 import style from "./WavePlayer.module.scss";
 const { container } = style;
 
@@ -22,14 +21,15 @@ function WavePlayer({ track, handleSkipPrevious, handleSkipNext }) {
 
   return (
     <div className={container}>
-      <AlbumArt {...track} />
-      <div id="waveform" ref={waveFormRef} />
-      <Timer
+      <AlbumArt
+        {...track}
         isReady={isReady}
         currentTime={currentTime}
         duration={duration}
         isPlaying={isPlaying}
       />
+      <div id="waveform" ref={waveFormRef} />
+
       <ButtonBar
         setUVolume={setUVolume}
         handlePlayPause={handlePlayPause}
